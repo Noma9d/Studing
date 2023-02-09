@@ -1,0 +1,19 @@
+body{
+    font-family:"Arial, Helvetica, sans-serif";
+    background-color: #cccfff;
+}
+#container img{
+    padding: :20px;
+}
+#container h1{
+    font-size: :16px;
+    line: height 24px;
+}
+.submitButton{
+    display: inline-block;
+    border: :5px solid #669900;
+    ::backdrop-color:#7BB700;
+    padding:10px;
+    width:150px;
+    font-weight:800;
+}
