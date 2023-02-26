@@ -5,13 +5,20 @@ wait_for_number = True
 
 while True:
     try:
-        a=input()
-        operand=float(a)
+        b=input()
+        result=float(b)
+        break
     except ValueError:
-        print(f'{a} is not a number. Try again')
+        print(f'{b} is not a number. Try again')
         continue
-    
-    
+
+
+while True:
+
+    if operator=='=':
+        print(f'Result:{result}')
+        break 
+
     while True:
         operator=input()
         if operator not in ('+', '-', '*', '/', '='):
@@ -19,13 +26,25 @@ while True:
             continue
         else:
             break
+
+    if operator=='=':
+        print(f'Result:{result}')
+        break             
+
+    while True:
+        try:
+            a=input()
+            operand=float(a)
+            break
+        except ValueError:
+            print(f'{a} is not a number. Try again')
+            continue
+    
     
     if operator=='+':
-        if result==None:
-            result=0
-        result+=operand
+            result+=operand
     elif operator=='-':
-        result-=operand
+            result-=operand
     elif operator=='*':
         result*=operand
     elif operator=='/':
@@ -33,6 +52,6 @@ while True:
             result/=operand
         except ZeroDivisionError:
             print('Delenie na 0')
-    elif operator=='=':
+    if operator=='=':
         print(f'Result:{result}')
-        break
+        break 
